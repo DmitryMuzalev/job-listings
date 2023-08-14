@@ -1,5 +1,12 @@
+import { Marker } from './components/Marker/Marker';
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Marker type="new" />
+      <Marker type="featured" />
+    </div>
+  );
 }
 
 export default App;

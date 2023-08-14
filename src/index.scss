@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--f-family);
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: var(--medium);
 }
 
 :root {
@@ -26,7 +30,11 @@
 }
 
 body {
-  font-size: 15px;
-  color: var(--primary);
+  //Test
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //===
   background: var(--bg);
 }
