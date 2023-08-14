@@ -10,6 +10,10 @@
   font-weight: var(--medium);
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   //_Font:
   --f-family: 'League Spartan', sans-serif;
@@ -22,19 +26,27 @@
 
   --primary: hsl(180, 29%, 50%);
   --bg: hsl(180, 52%, 96%); //(Background)
-  --bg-app: hsl(180, 31%, 95%); //(Filter Tablets)
+  --bg-filterTablet: hsl(180, 31%, 95%); //(Filter Tablets)
 
   --white: hsl(0, 0%, 100%);
   --grey: hsl(180, 8%, 52%);
   --black: hsl(180, 14%, 20%);
+
+  --shadow: hsl(180 29% 50% / 25%);
 }
 
 body {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 2rem;
   //Test
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   //===
   background: var(--bg);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 1.667rem;
 }

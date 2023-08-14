@@ -1,0 +1,55 @@
+.vacancy {
+  max-width: 1110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.667rem;
+  background: var(--white);
+  border-radius: 0.333rem;
+  box-shadow: var(--shadow) 0px 25px 50px -12px;
+}
+
+.info {
+  display: flex;
+  column-gap: 1.667rem;
+}
+
+.tablets {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.companyName {
+  font-size: 1.133rem;
+  font-weight: var(--bold);
+}
+
+.markers {
+  display: flex;
+  column-gap: 0.533rem;
+}
+
+.position {
+  font-size: 1.467rem;
+  font-weight: var(--bold);
+  color: var(--black);
+  transition: all 0.5s;
+  &:hover,
+  &:active {
+    color: var(--primary);
+  }
+}
+
+.conditions {
+  color: var(--grey);
+}
+
+.featured {
+  border-left: 5px solid var(--primary);
+}

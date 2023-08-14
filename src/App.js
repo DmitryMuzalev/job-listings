@@ -1,10 +1,10 @@
-import { Marker } from './components/Marker/Marker';
+import { Vacancy } from './components/Vacancy/Vacancy';
 
 function App() {
   return (
-    <div>
-      <Marker type="new" />
-      <Marker type="featured" />
+    <div className="app">
+      <Vacancy />
+      <Vacancy />
     </div>
   );
 }
