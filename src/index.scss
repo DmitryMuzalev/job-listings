@@ -9,6 +9,9 @@
   font-size: 15px;
   font-weight: var(--medium);
 }
+ul {
+  list-style: none;
+}
 
 a {
   text-decoration: none;
@@ -49,7 +52,9 @@ body {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  gap: 1.667rem;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.667rem;
+  }
 }

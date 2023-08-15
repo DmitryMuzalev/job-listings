@@ -1,10 +1,9 @@
-import { Vacancy } from './components/Vacancy/Vacancy';
+import { VacanciesList } from './components/VacanciesList/VacanciesList';
 
 function App() {
   return (
     <div className="app">
-      <Vacancy />
-      <Vacancy />
+      <VacanciesList />
     </div>
   );
 }

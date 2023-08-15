@@ -1,19 +1,20 @@
 import { Marker } from '../Marker/Marker';
 import classes from '../Vacancy.module.scss';
 
-function Content({ data }) {
+function Content({ company, position, postedAt, contract, location, ...data }) {
+  const [isNew, isFeatured] = [data.new, data.featured];
   return (
     <div className={classes.vacancy__content}>
       <div className={classes.vacancy__title}>
-        <h2>{data.company}</h2>
+        <h2>{company}</h2>
         <div>
-          <Marker text="new" />
-          <Marker text="featured" />
+          {isNew && <Marker text="new" />}
+          {isFeatured && <Marker text="featured" />}
         </div>
       </div>
-      <a href="#vacancy">{data.position}</a>
+      <a href="#vacancy">{position}</a>
       <p>
-        {data.postedAt} &#8226; {data.contract} &#8226; {data.location}
+        {postedAt} &#8226; {contract} &#8226; {location}
       </p>
     </div>
   );
