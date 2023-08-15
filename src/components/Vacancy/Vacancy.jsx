@@ -1,7 +1,8 @@
 import { clsx } from 'clsx';
-import { FilterTablet } from '../FilterTablet/FilterTablet';
-import { Marker } from '../Marker/Marker';
-import classses from './Vacancy.module.scss';
+import classes from './Vacancy.module.scss';
+import { FilterTablets } from './FilterTablets/FilterTablets';
+import { Logo } from './Logo/Logo';
+import { Content } from './Content/Content';
 
 function Vacancy() {
   const data = {
@@ -20,41 +21,17 @@ function Vacancy() {
     tools: [],
   };
 
-  const tablets = [data.role, data.level, ...data.languages, ...data.tools].map(
-    (t) => <FilterTablet>{t}</FilterTablet>
-  );
+  const tablets = [data.role, data.level, ...data.languages, ...data.tools];
 
-  const vacancy = clsx(classses.vacancy, data.featured && classses.featured);
+  const vacancy = clsx(classes.vacancy, data.featured && classes.featured);
 
   return (
     <div className={vacancy}>
-      <div className={classses.info}>
-        <div className={classses.logo}>
-          <img src={data.logo} alt={data.company} />
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            rowGap: '.6rem',
-          }}
-        >
-          <div className={classses.infoHeader}>
-            <p className={classses.companyName}>{data.company}</p>
-            <div className={classses.markers}>
-              <Marker text="new" />
-              <Marker text="featured" />
-            </div>
-          </div>
-          <a href="#position" className={classses.position}>
-            {data.position}
-          </a>
-          <p className={classses.conditions}>
-            {data.postedAt} &#8226; {data.contract} &#8226; {data.location}
-          </p>
-        </div>
+      <div className={classes.vacancy__info}>
+        <Logo image={data.logo} alt={data.company} />
+        <Content data={data} />
       </div>
-      <div className={classses.tablets}>{tablets}</div>
+      <FilterTablets tablets={tablets} />
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.tablets {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  @media (max-width: 500px) {
+    justify-content: flex-start;
+  }
+}

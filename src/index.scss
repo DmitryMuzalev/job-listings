@@ -41,6 +41,9 @@ body {
   max-width: 1140px;
   //Test
   padding: 2rem;
+  @media (max-width: 767px) {
+    padding: 2rem 1rem;
+  }
   //===
   background: var(--bg);
 }
