@@ -1,12 +1,10 @@
 .tablet {
-  display: inline-block;
   cursor: pointer;
-  padding: 0.6rem;
   text-transform: capitalize;
-  font-weight: var(--bold);
   background: var(--bg-filterTablet);
-  transition: all 0.5s;
   border-radius: 0.333rem;
+  padding: 0.6rem;
+  transition: all 0.5s;
   &:hover,
   &:active {
     color: var(--white);

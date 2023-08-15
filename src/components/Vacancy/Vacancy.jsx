@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 import classes from './Vacancy.module.scss';
 import { Logo } from './Logo/Logo';
 import { Content } from './Content/Content';
-import { Tablet } from '../Tablet/Tablet';
+import { Tablet } from './Tablet/Tablet';
 
 function Vacancy({ data }) {
   const { role, level, languages, tools, featured, logo, company } = data;
@@ -16,8 +16,8 @@ function Vacancy({ data }) {
         <Content {...data} />
       </div>
       <div className={classes.vacancy__tablets}>
-        {tablets.map((t, i) => (
-          <Tablet key={i}>{t}</Tablet>
+        {tablets.map((tablet, index) => (
+          <Tablet key={index}>{tablet}</Tablet>
         ))}
       </div>
     </div>

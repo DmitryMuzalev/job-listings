@@ -1,4 +1,4 @@
-import { useAppContext } from '../../hook/useContext';
+import { useAppContext } from '../../hook/useAppContext';
 import { Vacancy } from '../Vacancy/Vacancy';
 
 function VacanciesList() {

@@ -1,9 +1,24 @@
-.filter {
+.panel {
   display: flex;
-  padding: 1.333rem 2.667rem;
+  gap: 2.667rem;
+  justify-content: space-between;
+  width: 100%;
   background-color: var(--white);
   box-shadow: var(--shadow);
+  padding: 1.333rem 2.667rem;
   margin: 0px 0px 50px 0px;
   border-radius: var(--radius);
-  width: 100%;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.333rem;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

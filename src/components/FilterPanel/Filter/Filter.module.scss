@@ -1,7 +1,8 @@
-.tabletActive {
+.filter {
   display: flex;
   align-items: center;
   height: 2.133rem;
+  text-transform: capitalize;
   background: var(--bg-filterTablet);
   border-radius: var(--radius) 0 0 var(--radius);
   p {
