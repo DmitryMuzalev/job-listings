@@ -5,7 +5,7 @@ export const ContextApp = createContext(null);
 
 function Context({ children }) {
   const [vacancies, setVacancies] = useState(data);
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState(['Frontend']);
 
   useEffect(() => {
     if (!filters.length) setVacancies(data);

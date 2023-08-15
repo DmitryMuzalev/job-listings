@@ -1,16 +1,26 @@
 import { useAppContext } from '../../hook/useAppContext';
 import { Vacancy } from '../Vacancy/Vacancy';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function VacanciesList() {
   const { vacancies } = useAppContext();
   return (
-    <ul>
-      {vacancies.map((vacancy) => (
-        <li key={vacancy.id}>
-          <Vacancy data={vacancy} />
-        </li>
-      ))}
-    </ul>
+    <motion.ul layout transition={{ duration: 0.5 }}>
+      <AnimatePresence>
+        {vacancies.map((vacancy) => (
+          <motion.li
+            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            layout
+            key={vacancy.id}
+          >
+            <Vacancy data={vacancy} />
+          </motion.li>
+        ))}
+      </AnimatePresence>
+    </motion.ul>
   );
 }
 export { VacanciesList };
