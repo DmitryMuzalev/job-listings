@@ -26,7 +26,6 @@ a {
   --medium: 500;
 
   //_Color:
-
   --primary: hsl(180, 29%, 50%);
   --bg: hsl(180, 52%, 96%); //(Background)
   --bg-filterTablet: hsl(180, 31%, 95%); //(Filter Tablets)
@@ -36,7 +35,9 @@ a {
   --light-grey: hsl(0, 0%, 80%);
   --black: hsl(180, 14%, 20%);
 
-  --shadow: hsl(180 29% 50% / 25%);
+  //_Other:
+  --shadow: hsl(180 29% 50% / 25%) 0px 25px 50px -12px;
+  --radius: 0.333rem;
 }
 
 body {

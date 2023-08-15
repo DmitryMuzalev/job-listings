@@ -7,8 +7,8 @@
   justify-content: space-between;
   padding: 2rem 2.667rem;
   background: var(--white);
-  border-radius: 0.333rem;
-  box-shadow: var(--shadow) 0px 25px 50px -12px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 
   &__info {
     display: flex;
@@ -72,6 +72,16 @@
     div {
       display: flex;
       column-gap: 0.533rem;
+    }
+  }
+
+  &__tablets {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @media (max-width: 500px) {
+      justify-content: flex-start;
     }
   }
 

@@ -1,0 +1,24 @@
+.tabletActive {
+  display: flex;
+  align-items: center;
+  height: 2.133rem;
+  background: var(--bg-filterTablet);
+  border-radius: var(--radius) 0 0 var(--radius);
+  p {
+    padding: 0 0.6rem;
+  }
+  span {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 2.133rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--primary);
+    transition: all 0.5s;
+    &:hover {
+      background: var(--black);
+    }
+  }
+}

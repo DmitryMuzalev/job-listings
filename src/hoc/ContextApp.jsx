@@ -1,10 +1,11 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 import vacancies from '../data.json';
 
 export const ContextApp = createContext(null);
 
 function Context({ children }) {
-  const value = { vacancies };
+  const [filter, setFilter] = useState([]);
+  const value = { vacancies, filter, setFilter };
   return <ContextApp.Provider value={value}>{children}</ContextApp.Provider>;
 }
 
