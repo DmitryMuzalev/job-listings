@@ -29,7 +29,9 @@ function Vacancy() {
   return (
     <div className={vacancy}>
       <div className={classses.info}>
-        <img src={data.logo} alt={data.company} />
+        <div className={classses.logo}>
+          <img src={data.logo} alt={data.company} />
+        </div>
         <div
           style={{
             display: 'flex',
