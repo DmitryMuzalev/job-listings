@@ -9,7 +9,7 @@ function VacanciesList() {
       <AnimatePresence>
         {vacancies.map((vacancy) => (
           <motion.li
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
