@@ -1,12 +1,12 @@
+import { FilterItem } from './FilterItem/FilterItem';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAppContext } from '../../hook/useAppContext';
-import { Filter } from './Filter/Filter';
-import classes from './FilterPanel.module.scss';
+import classes from './Filter.module.scss';
 
-function FilterPanel() {
+function Filter() {
   const { filters, setFilters } = useAppContext();
   return (
-    <div className={classes.panel}>
+    <div className={classes.filter}>
       <div>
         <AnimatePresence initial={false} mode="sync">
           {filters.map((item, index) => (
@@ -18,7 +18,7 @@ function FilterPanel() {
               transition={{ type: 'spring' }}
               key={index}
             >
-              <Filter>{item}</Filter>
+              <FilterItem>{item}</FilterItem>
             </motion.div>
           ))}
         </AnimatePresence>
@@ -27,4 +27,4 @@ function FilterPanel() {
     </div>
   );
 }
-export { FilterPanel };
+export { Filter };

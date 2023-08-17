@@ -8,7 +8,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Context>
-      <App />
+      <div className="banner"></div>
+      <div className="container">
+        <App />
+      </div>
     </Context>
   </React.StrictMode>
 );

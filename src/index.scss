@@ -35,20 +35,11 @@
 
 html {
   @media (min-width: 767px) {
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
+    margin-right: calc(-1 * (100vw - 100%));
   }
 }
 
 body {
-  margin: 0 auto;
-  max-width: 1140px;
-  //Test
-  padding: 2rem;
-  @media (max-width: 767px) {
-    padding: 2rem 1rem;
-  }
-  //===
   background: var(--bg);
 }
 
@@ -60,10 +51,41 @@ a {
   text-decoration: none;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 2rem;
+  @media (max-width: 767px) {
+    padding: 0 1rem;
+  }
+}
+
+.banner {
+  height: 160px;
+  width: 100%;
+  background: var(--primary) url('../public/images/bg-header-desktop.svg')
+    no-repeat center / cover;
+  @media (max-width: 767px) {
+    background-image: url('../public/images/bg-header-mobile.svg');
+  }
+}
+
 .app {
+  display: flex;
+  flex-direction: column;
+  gap: 2.667rem;
+  @media (max-width: 767px) {
+    gap: 2rem;
+  }
   ul {
     display: flex;
     flex-direction: column;
     gap: 1.667rem;
   }
+}
+
+.panel {
+  margin-top: -2.533rem;
+  width: 100%;
+  min-height: 4.8rem;
 }

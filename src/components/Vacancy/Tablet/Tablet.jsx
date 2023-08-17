@@ -2,9 +2,9 @@ import { useAppContext } from '../../../hook/useAppContext';
 import classes from './Tablet.module.scss';
 
 function Tablet({ children }) {
-  const { addFilter } = useAppContext();
+  const { addFilterItem } = useAppContext();
   return (
-    <div className={classes.tablet} onClick={() => addFilter(children)}>
+    <div className={classes.tablet} onClick={() => addFilterItem(children)}>
       {children}
     </div>
   );

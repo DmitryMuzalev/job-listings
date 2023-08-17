@@ -19,13 +19,19 @@ function Context({ children }) {
     }
   }, [filters]);
 
-  const addFilter = (filter) => {
+  const addFilterItem = (filter) => {
     if (!filters.includes(filter)) setFilters([...filters, filter]);
   };
-  const removeFilter = (filter) =>
+  const removeFilterItem = (filter) =>
     setFilters(filters.filter((item) => item !== filter));
 
-  const value = { vacancies, filters, addFilter, removeFilter, setFilters };
+  const value = {
+    vacancies,
+    filters,
+    addFilterItem,
+    removeFilterItem,
+    setFilters,
+  };
   return <ContextApp.Provider value={value}>{children}</ContextApp.Provider>;
 }
 
