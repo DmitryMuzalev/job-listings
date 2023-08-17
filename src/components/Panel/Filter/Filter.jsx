@@ -1,7 +1,7 @@
 import { FilterItem } from './FilterItem/FilterItem';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useAppContext } from '../../hook/useAppContext';
 import classes from './Filter.module.scss';
+import { useAppContext } from '../../../hook/useAppContext';
 
 function Filter() {
   const { filters, setFilters } = useAppContext();

@@ -1,6 +1,6 @@
 import { useAppContext } from '../../hook/useAppContext';
-import { Vacancy } from '../Vacancy/Vacancy';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Vacancy } from './Vacancy/Vacancy';
 
 function VacanciesList() {
   const { vacancies } = useAppContext();

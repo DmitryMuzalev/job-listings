@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import { Context } from './hoc/ContextApp';
+import { Header } from './components/Header/Header';
+import { Container } from './components/Container/Container';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Context>
-      <div className="banner"></div>
-      <div className="container">
+      <Header />
+      <Container>
         <App />
-      </div>
+      </Container>
     </Context>
   </React.StrictMode>
 );

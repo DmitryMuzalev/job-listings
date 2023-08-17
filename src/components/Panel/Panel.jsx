@@ -1,6 +1,5 @@
 import { useAppContext } from '../../hook/useAppContext';
-import { Filter } from '../Filter/Filter';
-import '../../index.scss';
+import { Filter } from './Filter/Filter';
 
 function Panel() {
   const { filters } = useAppContext();

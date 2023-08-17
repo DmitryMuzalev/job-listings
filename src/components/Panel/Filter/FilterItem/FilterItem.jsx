@@ -1,4 +1,4 @@
-import { useAppContext } from '../../../hook/useAppContext';
+import { useAppContext } from '../../../../hook/useAppContext';
 import classes from '../Filter.module.scss';
 
 function FilterItem({ children }) {

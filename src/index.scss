@@ -51,22 +51,25 @@ a {
   text-decoration: none;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1140px;
-  padding: 0 2rem;
-  @media (max-width: 767px) {
-    padding: 0 1rem;
-  }
-}
-
-.banner {
+.header {
   height: 160px;
   width: 100%;
   background: var(--primary) url('../public/images/bg-header-desktop.svg')
     no-repeat center / cover;
   @media (max-width: 767px) {
     background-image: url('../public/images/bg-header-mobile.svg');
+  }
+  h1 {
+    display: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 2rem;
+  @media (max-width: 767px) {
+    padding: 0 1rem;
   }
 }
 
