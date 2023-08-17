@@ -36,6 +36,7 @@
 html {
   @media (min-width: 767px) {
     margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: hidden;
   }
 }
 

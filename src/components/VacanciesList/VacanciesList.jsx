@@ -4,16 +4,21 @@ import { Vacancy } from './Vacancy/Vacancy';
 
 function VacanciesList() {
   const { vacancies } = useAppContext();
+  const variants = {
+    start: { opacity: 1 },
+    stop: { opacity: 0 },
+  };
   return (
-    <motion.ul layout transition={{ duration: 0.5 }}>
+    <motion.ul layout transition={{ duration: 0.3 }}>
       <AnimatePresence>
         {vacancies.map((vacancy) => (
           <motion.li
-            transition={{ duration: 0.3 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             layout
+            variants={variants}
+            initial={'stop'}
+            animate={'start'}
+            exit={'stop'}
+            transition={{ duration: 0.3 }}
             key={vacancy.id}
           >
             <Vacancy data={vacancy} />
