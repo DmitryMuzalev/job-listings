@@ -6,7 +6,6 @@ function Panel() {
   const { filters } = useAppContext();
   return (
     <div className="panel">
-      {' '}
       <AnimatePresence initial={false}>
         {!!filters.length && <Filter />}
       </AnimatePresence>

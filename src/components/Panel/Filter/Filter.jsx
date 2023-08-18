@@ -1,5 +1,5 @@
 import { FilterItem } from './FilterItem/FilterItem';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import classes from './Filter.module.scss';
 import { useAppContext } from '../../../hook/useAppContext';
 
@@ -14,11 +14,9 @@ function Filter() {
       className={classes.filter}
     >
       <div>
-        <AnimatePresence initial={false}>
-          {filters.map((item, index) => (
-            <FilterItem key={index}>{item}</FilterItem>
-          ))}
-        </AnimatePresence>
+        {filters.map((item, index) => (
+          <FilterItem key={index}>{item}</FilterItem>
+        ))}
       </div>
       <button onClick={() => setFilters([])}>Clear</button>
     </motion.div>
