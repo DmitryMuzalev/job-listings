@@ -12,25 +12,46 @@
 
 :root {
   //_Font:
-  --f-family: 'League Spartan', sans-serif;
-
+  /*  --f-family: 'League Spartan', sans-serif;
+*/
   //_Font weight:
-  --bold: 700;
-  --medium: 500;
+  /*  --bold: 700;
+  --medium: 500;*/
 
   //_Color:
-  --primary: hsl(180, 29%, 50%);
+  /*  --primary: hsl(180, 29%, 50%);
   --bg: hsl(180, 52%, 96%); //(Background)
   --bg-filterTablet: hsl(180, 31%, 95%); //(Filter Tablets)
 
   --white: hsl(0, 0%, 100%);
   --grey: hsl(180, 8%, 52%);
   --light-grey: hsl(0, 0%, 80%);
-  --black: hsl(180, 14%, 20%);
+  --black: hsl(180, 14%, 20%);*/
 
   //_Other:
-  --shadow: hsl(180 29% 50% / 25%) 0px 25px 50px -12px;
-  --radius: 0.333rem;
+  /*  --shadow: hsl(180 29% 50% / 25%) 0px 25px 50px -12px;
+  --radius: 0.333rem;*/
+
+  --primary: hsl(180, 29%, 50%);
+  --grey-100: hsl(180, 52%, 96%);
+  --grey-200: hsl(180, 31%, 95%);
+  --grey-500: hsl(0, 0%, 80%);
+  --grey-800: hsl(180, 8%, 52%);
+  --grey-900: hsl(180, 14%, 20%);
+  --white: hsl(0, 0%, 100%);
+
+  //_Fonts:
+  --f-family: 'League Spartan', sans-serif;
+  --fs-normal: 15px;
+  --fw-normal: 500;
+  --fw-bold: 700;
+
+  //_Other:
+  --br-sm: 5px;
+  --br-full: 50%;
+
+  --shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 html {
@@ -41,7 +62,7 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background: var(--grey-100);
 }
 
 ul {

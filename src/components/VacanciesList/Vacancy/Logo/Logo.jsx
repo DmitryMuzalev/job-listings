@@ -1,8 +1,8 @@
-import classes from '../Vacancy.module.scss';
+import styles from '../Vacancy.module.scss';
 
 function Logo({ image, alt }) {
   return (
-    <div className={classes.vacancy__logo}>
+    <div className={styles.vacancy__logo}>
       <img src={image} alt={alt} />
     </div>
   );

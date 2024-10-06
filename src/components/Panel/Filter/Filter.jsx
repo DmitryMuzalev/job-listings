@@ -1,6 +1,6 @@
 import { FilterItem } from './FilterItem/FilterItem';
 import { motion } from 'framer-motion';
-import classes from './Filter.module.scss';
+import styles from './Filter.module.scss';
 import { useAppContext } from '../../../hook/useAppContext';
 
 function Filter() {
@@ -11,7 +11,7 @@ function Filter() {
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
-      className={classes.filter}
+      className={styles.filter}
     >
       <div>
         {filters.map((item, index) => (

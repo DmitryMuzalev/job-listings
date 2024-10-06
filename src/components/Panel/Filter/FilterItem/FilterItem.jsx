@@ -1,5 +1,5 @@
 import { useAppContext } from '../../../../hook/useAppContext';
-import classes from '../Filter.module.scss';
+import styles from '../Filter.module.scss';
 import { motion } from 'framer-motion';
 
 function FilterItem({ children }) {
@@ -7,7 +7,7 @@ function FilterItem({ children }) {
 
   return (
     <motion.div
-      className={classes.filter__item}
+      className={styles.filter__item}
       layout
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

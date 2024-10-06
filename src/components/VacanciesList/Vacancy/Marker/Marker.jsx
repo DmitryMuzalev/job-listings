@@ -1,15 +1,15 @@
-import classes from './Marker.module.scss';
+import styles from './Marker.module.scss';
 import { clsx } from 'clsx';
 
 function Marker({ text }) {
-  const styles = clsx(
-    classes.marker,
-    text === 'new' && classes.new,
-    text === 'featured' && classes.featured
+  const markerStyles = clsx(
+    styles.marker,
+    text === 'new' && styles.new,
+    text === 'featured' && styles.featured
   );
 
   return (
-    <span className={styles}>
+    <span className={markerStyles}>
       {text}
       {text === 'new' ? '!' : ''}
     </span>

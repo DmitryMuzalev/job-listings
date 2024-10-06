@@ -1,8 +1,8 @@
 .tablet {
   cursor: pointer;
   text-transform: capitalize;
-  background: var(--bg-filterTablet);
-  border-radius: 0.333rem;
+  background: var(--grey-200);
+  border-radius: var(--br-sm);
   padding: 0.6rem;
   transition: all 0.5s;
   &:hover,

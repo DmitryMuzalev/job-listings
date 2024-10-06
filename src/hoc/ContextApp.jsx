@@ -22,6 +22,7 @@ function Context({ children }) {
   const addFilterItem = (filter) => {
     if (!filters.includes(filter)) setFilters([...filters, filter]);
   };
+
   const removeFilterItem = (filter) =>
     setFilters(filters.filter((item) => item !== filter));
 
