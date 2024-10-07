@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
 
 * {
   margin: 0;
@@ -41,7 +41,7 @@
   --white: hsl(0, 0%, 100%);
 
   //_Fonts:
-  --f-family: 'League Spartan', sans-serif;
+  --f-family: "League Spartan", sans-serif;
   --fs-normal: 15px;
   --fw-normal: 500;
   --fw-bold: 700;
@@ -76,32 +76,33 @@ a {
 .header {
   height: 160px;
   width: 100%;
-  background: var(--primary) url('../public/images/bg-header-desktop.svg')
+  background: var(--primary) url("./assets/images/bg-header-desktop.svg")
     no-repeat center / cover;
   @media (max-width: 767px) {
-    background-image: url('../public/images/bg-header-mobile.svg');
+    background-image: url("./assets/images/bg-header-mobile.svg");
   }
+
   h1 {
     display: none;
   }
 }
 
 .container {
-  margin: 0 auto;
+  width: 100%;
   max-width: 1140px;
-  padding: 0 2rem;
-  @media (max-width: 767px) {
-    padding: 0 1rem;
-  }
+  padding: 0 0.75rem;
+  margin: 0 auto;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   gap: 2.667rem;
+
   @media (max-width: 767px) {
     gap: 2rem;
   }
+
   ul {
     display: flex;
     flex-direction: column;

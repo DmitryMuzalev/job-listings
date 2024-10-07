@@ -1,11 +1,15 @@
-import { Panel } from './components/Panel/Panel';
-import { VacanciesList } from './components/VacanciesList/VacanciesList';
+import { Header } from "./components/Header/Header";
+import { FilterPanel } from "./components/FilterPanel/FilterPanel";
+import { JobList } from "./components/JobList/JobList";
 
 function App() {
   return (
     <div className="app">
-      <Panel />
-      <VacanciesList />
+      <Header />
+      <main className="container">
+        <FilterPanel />
+        <JobList />
+      </main>
     </div>
   );
 }
