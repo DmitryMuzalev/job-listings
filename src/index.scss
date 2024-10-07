@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
 
 * {
   margin: 0;
@@ -11,27 +11,6 @@
 }
 
 :root {
-  //_Font:
-  /*  --f-family: 'League Spartan', sans-serif;
-*/
-  //_Font weight:
-  /*  --bold: 700;
-  --medium: 500;*/
-
-  //_Color:
-  /*  --primary: hsl(180, 29%, 50%);
-  --bg: hsl(180, 52%, 96%); //(Background)
-  --bg-filterTablet: hsl(180, 31%, 95%); //(Filter Tablets)
-
-  --white: hsl(0, 0%, 100%);
-  --grey: hsl(180, 8%, 52%);
-  --light-grey: hsl(0, 0%, 80%);
-  --black: hsl(180, 14%, 20%);*/
-
-  //_Other:
-  /*  --shadow: hsl(180 29% 50% / 25%) 0px 25px 50px -12px;
-  --radius: 0.333rem;*/
-
   --primary: hsl(180, 29%, 50%);
   --grey-100: hsl(180, 52%, 96%);
   --grey-200: hsl(180, 31%, 95%);
@@ -41,7 +20,7 @@
   --white: hsl(0, 0%, 100%);
 
   //_Fonts:
-  --f-family: "League Spartan", sans-serif;
+  --f-family: 'League Spartan', sans-serif;
   --fs-normal: 15px;
   --fw-normal: 500;
   --fw-bold: 700;
@@ -76,10 +55,10 @@ a {
 .header {
   height: 160px;
   width: 100%;
-  background: var(--primary) url("./assets/images/bg-header-desktop.svg")
+  background: var(--primary) url('./assets/images/bg-header-desktop.svg')
     no-repeat center / cover;
   @media (max-width: 767px) {
-    background-image: url("./assets/images/bg-header-mobile.svg");
+    background-image: url('./assets/images/bg-header-mobile.svg');
   }
 
   h1 {
@@ -110,8 +89,69 @@ a {
   }
 }
 
-.panel {
-  margin-top: -2.533rem;
-  width: 100%;
-  min-height: 4.8rem;
+.tag {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: var(--grey-200);
+  color: var(--primary);
+  border-radius: var(--br-sm);
+  overflow: hidden;
+  font-size: 0.8rem;
+  line-height: 1;
+  min-height: 26px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--grey-100);
+    background-color: var(--primary);
+  }
+
+  span {
+    color: inherit;
+    padding: 0.25rem 1rem;
+  }
+
+  &_light {
+    font-weight: var(--fw-bold);
+  }
+
+  &_dark {
+    background-color: var(--grey-900);
+    color: var(--grey-100);
+  }
+
+  &_primary {
+    background-color: var(--primary);
+    color: var(--grey-100);
+  }
+
+  &_marker {
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  &_with-remove {
+    cursor: default;
+    &:hover {
+      background-color: var(--grey-200);
+      color: var(--primary);
+    }
+  }
+
+  &__remove-btn {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--grey-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    align-self: stretch;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--grey-900);
+    }
+  }
 }

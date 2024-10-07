@@ -1,7 +1,7 @@
-import { Box } from "../../UI/Box/Box";
-import { List } from "../../UI/List/List";
-import { Tag } from "../../UI/Tag/Tag";
-import styles from "./JobItem.module.scss";
+import { Box } from '../../UI/Box/Box';
+import { List } from '../../UI/List/List';
+import { Tag } from '../../UI/Tag/Tag';
+import styles from './JobItem.module.scss';
 
 function JobItem({ data }) {
   const {
@@ -32,8 +32,16 @@ function JobItem({ data }) {
             <h2>{company}</h2>
             {(isNew || featured) && (
               <List>
-                {!!isNew && <Tag>new</Tag>}
-                {featured && <Tag>featured</Tag>}
+                {!!isNew && (
+                  <Tag bg="primary" type="marker">
+                    new!
+                  </Tag>
+                )}
+                {featured && (
+                  <Tag bg="dark" type="marker">
+                    featured
+                  </Tag>
+                )}
               </List>
             )}
           </div>
